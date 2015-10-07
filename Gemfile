@@ -27,6 +27,7 @@ gem 'active_model_serializers', '~> 0.10.0.rc2'
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'byebug'
+  gem 'guard-rspec', require: false
 end
 
 group :test do
