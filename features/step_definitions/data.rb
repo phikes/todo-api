@@ -20,3 +20,7 @@ Then(/^(#{CAPTURE_INT}) .* has the following attributes:$/) do |count, table|
 
   expect(matched_items.count).to eq count
 end
+
+Then(/^the response is a .* with the following attributes:$/) do |table|
+  expect(JSON.parse last_response.body).to include table.rows_hash
+end
