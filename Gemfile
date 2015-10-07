@@ -33,6 +33,7 @@ end
 group :test do
   gem 'shoulda-matchers', '~> 3.0'
   gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
 end
 
 group :development do
