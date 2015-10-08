@@ -3,7 +3,7 @@ require 'rails_helper'
 class TestClass; end
 
 describe String do
-  describe '.constantize' do
+  describe '#constantize' do
     subject { 'TestClass'.constantize }
 
     it { is_expected.to eq TestClass }
