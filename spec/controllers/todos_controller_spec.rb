@@ -37,4 +37,13 @@ RSpec.describe TodosController, type: :controller do
         }.to_not change { Todo.count }
       end
   end
+
+  context 'DELETE #destroy' do
+    let(:todo) { Todo.create name: 'Walk the dog' }
+
+    it do
+      delete :destroy, id: todo.id
+      expect(Todo.find_by_name todo.name).to be_nil
+    end
+  end
 end
