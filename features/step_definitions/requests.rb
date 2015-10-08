@@ -4,7 +4,7 @@ end
 
 When(/^the client requests the creation of a (.*) with the following attributes:$/) do |model, table|
   resource = model.titleize.constantize.new table.rows_hash
-  post(polymorphic_path(model.pluralize), model => resource.attributes)
+  post polymorphic_path(model.pluralize), model => resource.attributes
 end
 
 When(/^the client requests deletion of the first (.*)$/) do |model|
