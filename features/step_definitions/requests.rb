@@ -1,5 +1,5 @@
-When(/^the client requests a list of (.*?)$/) do |type|
-  get("/#{type.pluralize.downcase.tr(' ', '-')}")
+When(/^the client requests a list of (.*?)$/) do |model|
+  get polymorphic_path(model.pluralize)
 end
 
 When(/^the client requests the creation of a (.*) with the following attributes:$/) do |model, table|
