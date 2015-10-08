@@ -17,7 +17,6 @@ Then(/^the response is a .* with the following attributes:$/) do |table|
   expect(last_response.body.json).to include table.rows_hash
 end
 
-
 Then(/^the response is a list containing (#{CAPTURE_INT}) .+$/) do |count|
   expect(last_response.body.json.count).to eq count
 end
