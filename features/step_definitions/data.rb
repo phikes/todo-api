@@ -1,6 +1,6 @@
 Given(/^the system knows about the following (.*):$/) do |model, table|
   table.hashes.each do |attributes|
-    model.singularize.titleize.constantize.create attributes
+    model.constantize(heuristically: true).create attributes
   end
 end
 
