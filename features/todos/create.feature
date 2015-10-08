@@ -12,5 +12,5 @@ Feature: Todo Create
   When the client requests the creation of a todo with the following attributes:
     |name||
   Then the response is an error
-  And the error contains the following attributes:
+  And the response contains the following attributes:
     |name|can't be blank|
