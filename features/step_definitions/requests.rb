@@ -14,3 +14,11 @@ end
 Then(/^the response is an error$/) do
   expect(last_response.status).to be >= 400
 end
+
+Then(/^the error contains the following attributes:$/) do |table|
+  response = JSON.parse last_response.body
+
+  table.rows_hash.each do |(key, value)|
+    expect(response[key]).to include value
+  end
+end
