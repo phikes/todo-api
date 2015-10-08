@@ -6,9 +6,13 @@ class TodosController < ApplicationController
   end
 
   def create
-    @todo = Todo.create todo_params
+    @todo = Todo.new todo_params
 
-    render json: @todo
+    if @todo.save
+      render json: @todo
+    else
+      render json: @todo.errors, status: :unprocessable_entity
+    end
   end
 
   protected

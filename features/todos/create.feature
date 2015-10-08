@@ -7,3 +7,8 @@ Feature: Todo Create
     |name|Walk the dog|
   Then the response is a todo with the following attributes:
     |name|Walk the dog|
+
+  Scenario: Todo without name
+  When the client requests the creation of a todo with the following attributes:
+    |name||
+  Then the response is an error
