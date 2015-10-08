@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 ruby '2.2.2'
 
-gem 'rails', github: "rails/rails"
-gem 'sprockets-rails', github: "rails/sprockets-rails"
-gem 'sprockets', github: "rails/sprockets"
-gem 'sass-rails', github: "rails/sass-rails"
-gem 'arel', github: "rails/arel"
-gem 'rack', github: "rack/rack"
+gem 'rails', github: 'rails/rails'
+gem 'sprockets-rails', github: 'rails/sprockets-rails'
+gem 'sprockets', github: 'rails/sprockets'
+gem 'sass-rails', github: 'rails/sass-rails'
+gem 'arel', github: 'rails/arel'
+gem 'rack', github: 'rack/rack'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -22,7 +22,8 @@ gem 'sqlite3'
 # Use ActiveModelSerializers to serialize JSON responses
 gem 'active_model_serializers', '~> 0.10.0.rc2'
 
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS),
+# making cross-origin AJAX possible
 # gem 'rack-cors'
 
 group :development, :test do
@@ -32,12 +33,13 @@ end
 
 group :test do
   gem 'shoulda-matchers', '~> 3.0'
-  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner'
 end
 
 group :development do
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in the
+  # background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'guard-rspec', require: false
   gem 'guard-cucumber', require: false

@@ -1,3 +1,4 @@
+# This is the RESTful controller for managing Todos.
 class TodosController < ApplicationController
   def index
     @todos = Todo.all
@@ -23,6 +24,7 @@ class TodosController < ApplicationController
   end
 
   protected
+
   def todo_params
     params.require(:todo).permit :name
   end
