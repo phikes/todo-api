@@ -35,6 +35,7 @@ group :test do
   gem 'shoulda-matchers', '~> 3.0'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'codeclimate-test-reporter', require: false
 end
 
 group :development do
