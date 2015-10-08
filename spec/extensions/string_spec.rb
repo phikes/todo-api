@@ -24,6 +24,6 @@ describe String do
   describe '#json' do
     subject { '{ "name": "test" }'.json }
 
-    it { is_expected.to eq(name: 'test') }
+    it { is_expected.to eq("name" => 'test') }
   end
 end
