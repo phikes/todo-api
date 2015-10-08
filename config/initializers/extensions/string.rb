@@ -12,4 +12,8 @@ class String
   def constantize_with_heuristic
     singularize.titleize.gsub(/\s/, '').constantize
   end
+
+  def json
+    JSON.parse self
+  end
 end

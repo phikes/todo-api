@@ -20,4 +20,10 @@ describe String do
       it { is_expected.to eq TestClass }
     end
   end
+
+  describe '#json' do
+    subject { '{ "name": "test" }'.json }
+
+    it { is_expected.to eq(name: 'test') }
+  end
 end
